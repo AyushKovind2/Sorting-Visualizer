@@ -1,0 +1,296 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+a{
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+}
+header{
+    background: rgb(236, 234, 234);
+    /* display: flexbox; */
+    margin: 0px ;
+     width: 1360px;
+     height: 300px;
+}
+ul.top-list{
+    margin: 0;
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+}
+ul.top-list li{
+    list-style: none;
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    color: #3c137e;
+}
+
+.grid-main{
+    
+    /* display: grid;
+    height: calc(20vh - 700px);
+    grid-template-columns: 1fr 3fr 1fr; */
+}
+#sort{
+    visibility: collapse;
+    margin-left:auto;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    margin-right:auto;
+    display:block;
+    margin-top:0%;
+    margin-bottom:0%;
+}
+button#sort:hover,
+button#sort:active,
+button#sort:focus{
+    color: black;
+}
+button#sort:disabled{
+    cursor: not-allowed;
+    opacity: .5;
+}
+#newArray{
+    margin: 20px 90px;
+ 
+    border: none;
+    outline: none;
+    /* background: azure; */
+    color: #292929;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    transition: .5s;
+}
+#newArray:hover{
+    color: black
+}
+
+/* 
+#sort{
+    visibility: collapse;
+    margin: 50px 10;
+    padding: 17px 33px;
+    border-radius: 50px;
+    border: 1px solid yellow;
+    outline: none;
+    background: transparent;
+    letter-spacing: 4px;    
+    text-transform: uppercase;
+    font-weight: bolder;    
+    color: black;
+    text-align: left;
+    font-size: 1.1rem;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    transition: .5s;
+}
+
+button#sort:hover,
+button#sort:active,
+button#sort:focus{
+    background: azure;
+    color: black;
+    border: 2px solid #000;
+    margin: 19px 0;
+    text-shadow: 0 0 5px azure;
+    box-shadow: inset 0 0 10px #292929;
+}
+button#sort:disabled{
+    cursor: not-allowed;
+    opacity: .5;
+}
+
+#newArray{
+    margin: 20px 0;
+    border: none;
+    outline: none;
+    background: azure;
+    color: #292929;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    transition: .5s;
+}
+#newArray:hover{
+    color: black
+}
+*/
+.sidebar{
+    margin: 0px;
+    padding: 18px;
+    background: rgb(236, 234, 234);
+ 
+    color: rgb(1, 17, 17);
+    display: inline;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar :left{
+    width: 300px;
+    height: 500px;
+    margin: 300px;
+    padding:200px;
+    
+}
+.algoname{
+    display: inline-block;
+    border: 1px ;
+}
+#left{
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+#right{
+    justify-content: center;
+    align-items: center;
+}
+#right div{
+    text-transform: capitalize;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    margin: .6em;
+    cursor: pointer;
+    padding: 10px;
+    transition: .3s;
+}
+#right .sorting-list div:hover{
+  
+    color: coral;
+}
+#right .sorting-list div.selectedAlgo{
+    display: inline-block;
+    color: coral;
+}
+@media screen and (max-width: 768px){
+    #right div{
+        font-size: 14px;
+    }
+    #left{
+        font-size: 14px;
+    }
+}
+.slider {
+/* padding-top: 7px;
+  font-family: sans-serif;
+  font-weight: 700;
+  display: inline-block;*/
+
+    -webkit-appearance: none;
+      display: inline-block;
+    appearance: none;
+    width: 25%;
+    height: 10px;
+    border-radius: 30%;
+    background: #ce6118;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #0a0a0a;
+    border: 2px solid #aec71f;
+    box-shadow: inset 0 0 2px #3be009;
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+#center{
+    display: flex;
+    align-items: flex-end;
+    align-content: center;
+    padding: 0 70px;
+    margin: 0 200px;
+    height: 310px;
+    width: 600px;
+}
+
+.disabled{
+    color: #f00 !important;
+    cursor: not-allowed !important;
+}
+
+.info{
+    padding: 0 100px;
+    font-family: monospace;
+    color: #ff8115;
+}
+
+.imp{
+    color: orange;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 900;
+    font-size: 1.5em;;
+}
+
+ul.algo-overview{
+    padding: 0;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+}
+
+ul.algo-overview li{
+    list-style: none;
+    padding: 0 5px;
+    margin: .5em;
+    font-family: monospace;
+    font-size: .89em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #07f4ff;
+}
+ul.algo-overview li span{
+    color: #0897fd;
+    font-size: 1em;
+    text-transform: none;
+}
+#note{
+    margin: 0;
+    padding: 0;
+}
+#note > p{
+    margin: 0;
+    padding: 0;
+    font-size: .7rem;
+    text-transform: initial;
+    color: #07f4ff;
+}
+#note > p span{
+    color: #ff8115;
+    background-color: navy;
+}
+label{
+    font-family: monospace;
+    font-size: 1.2rem;
+    padding: 0 5px;
+    text-transform: capitalize;
+}
